@@ -1,1 +1,39 @@
+/* ================= DARK MODE ================= */
+body.dark {
+  background-color: #0f172a;
+  color: #e5e7eb;
+}
+
+/* Navbar */
+body.dark .header {
+  background-color: #020617;
+  border-bottom: 1px solid #1e293b;
+}
+
+/* Cards */
+body.dark .project-card,
+body.dark .skill-card {
+  background-color: #1e293b;
+}
+
+/* Text */
+body.dark .project-content p {
+  color: #cbd5f5;
+}
+
+/* Buttons */
+body.dark .btn.secondary {
+  border-color: #38bdf8;
+  color: #38bdf8;
+}
+
+body.dark .btn.secondary:hover {
+  background-color: #38bdf8;
+  color: #020617;
+}
+
+/* Footer */
+body.dark .footer {
+  background-color: #020617;
+}
 
