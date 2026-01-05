@@ -1,19 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
-
-  /* ================= PROJECTS ================= */
   const projectsGrid = document.getElementById("projects-grid");
 
   function renderProjects(filter = "all") {
-    projectsGrid.innerHTML = ""; // clear
-
-    const filtered = filter === "all" 
-      ? projects 
-      : projects.filter(p => p.tech.includes(filter));
-
+    projectsGrid.innerHTML = "";
+    const filtered = filter === "all" ? projects : projects.filter(p => p.tech.includes(filter));
     filtered.forEach(project => {
       const card = document.createElement("div");
-      card.classList.add("project-card", "fade-in");
-
+      card.classList.add("project-card","fade-in");
       card.innerHTML = `
         <img src="${project.image}" alt="${project.title}">
         <div class="project-content">
@@ -31,9 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   renderProjects();
 
-  /* ================= FILTER BUTTONS ================= */
+  // FILTER BUTTONS
   const filterButtons = document.querySelectorAll(".filter-btn");
-
   filterButtons.forEach(btn => {
     btn.addEventListener("click", () => {
       document.querySelector(".filter-btn.active").classList.remove("active");
@@ -42,54 +34,31 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  /* ================= DARK MODE ================= */
+  // DARK MODE
   const themeToggle = document.getElementById("theme-toggle");
   const body = document.body;
-
   const savedTheme = localStorage.getItem("theme");
-  if (savedTheme === "dark") {
-    body.classList.add("dark");
-    themeToggle.textContent = "☀️";
-  }
-
-  themeToggle.addEventListener("click", () => {
+  if(savedTheme==="dark"){ body.classList.add("dark"); themeToggle.textContent="☀️"; }
+  themeToggle.addEventListener("click", ()=>{
     body.classList.toggle("dark");
-    if (body.classList.contains("dark")) {
-      localStorage.setItem("theme", "dark");
-      themeToggle.textContent = "☀️";
-    } else {
-      localStorage.setItem("theme", "light");
-      themeToggle.textContent = "🌙";
-    }
+    themeToggle.textContent = body.classList.contains("dark")?"☀️":"🌙";
+    localStorage.setItem("theme", body.classList.contains("dark")?"dark":"light");
   });
 
-  /* ================= HAMBURGER MENU ================= */
+  // HAMBURGER MENU
   const hamburger = document.getElementById("hamburger");
   const navLinks = document.getElementById("nav-links");
+  hamburger.addEventListener("click", ()=>{ navLinks.classList.toggle("open"); hamburger.classList.toggle("active"); });
 
-  hamburger.addEventListener("click", () => {
-    navLinks.classList.toggle("open");
-    hamburger.classList.toggle("active");
-  });
-
-  /* ================= SCROLL ANIMATIONS ================= */
+  // SCROLL ANIMATIONS
   const faders = document.querySelectorAll(".fade-in");
-
-  const appearOptions = {
-    threshold: 0.2,
-    rootMargin: "0px 0px -50px 0px"
-  };
-
-  const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
+  const appearOptions = { threshold:0.2, rootMargin:"0px 0px -50px 0px" };
+  const appearOnScroll = new IntersectionObserver((entries,observer)=>{
+    entries.forEach(entry=>{
+      if(!entry.isIntersecting) return;
       entry.classList.add("appear");
-      appearOnScroll.unobserve(entry);
+      observer.unobserve(entry);
     });
   }, appearOptions);
-
-  faders.forEach(fader => {
-    appearOnScroll.observe(fader);
-  });
-
+  faders.forEach(fader => appearOnScroll.observe(fader));
 });
