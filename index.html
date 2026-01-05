@@ -1,1 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name | Frontend Developer</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/dark.css">
+
+  <!-- JS -->
+  <script defer src="js/data.js"></script>
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="header">
+    <nav class="nav container">
+      <h1 class="logo">YourName</h1>
+
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <!-- Dark Mode Toggle -->
+      <button id="theme-toggle" aria-label="Toggle Dark Mode">
+        🌙
+      </button>
+    </nav>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <main id="home">
+    <section class="hero container">
+      <div class="hero-content">
+        <h2>Hi, I’m <span>Your Name</span></h2>
+        <p>
+          Frontend Developer focused on building clean, responsive,
+          and user-friendly web experiences.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#projects" class="btn primary">View Projects</a>
+          <a href="https://github.com/yourusername" target="_blank" class="btn secondary">
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img src="assets/images/profile.png" alt="Your profile photo">
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= PROJECTS ================= -->
+  <section id="projects" class="projects container">
+    <h2 class="section-title">Projects</h2>
+
+    <div id="projects-grid" class="projects-grid">
+      <!-- Project cards will be injected by JavaScript -->
+    </div>
+  </section>
+
+  <!-- ================= SKILLS ================= -->
+  <section id="skills" class="skills container">
+    <h2 class="section-title">Skills</h2>
+
+    <div class="skills-grid">
+      <div class="skill-card">HTML</div>
+      <div class="skill-card">CSS</div>
+      <div class="skill-card">JavaScript</div>
+      <div class="skill-card">Git & GitHub</div>
+      <div class="skill-card">Responsive Design</div>
+      <div class="skill-card">UI / UX</div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section id="about" class="about container">
+    <h2 class="section-title">About Me</h2>
+
+    <p>
+      I’m a passionate frontend developer who enjoys turning ideas into
+      real, interactive websites. I focus on clean code, responsive
+      layouts, and modern UI/UX design.
+    </p>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section id="contact" class="contact container">
+    <h2 class="section-title">Contact</h2>
+
+    <p>
+      Feel free to reach out if you’d like to work together or just say hi!
+    </p>
+
+    <div class="contact-links">
+      <a href="mailto:youremail@example.com">Email</a>
+      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <p>© 2026 Your Name. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
 
