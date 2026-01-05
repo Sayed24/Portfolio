@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Your Name | Frontend Developer</title>
 
 <!-- Google Font -->
@@ -10,8 +10,6 @@
 
 <!-- CSS -->
 <link rel="stylesheet" href="css/styles.css">
-<link rel="stylesheet" href="css/dark.css">
-<link rel="stylesheet" href="css/animations.css">
 
 <!-- JS -->
 <script defer src="js/data.js"></script>
@@ -19,18 +17,13 @@
 </head>
 <body>
 
-<!-- ================= NAVBAR ================= -->
+<!-- NAVBAR -->
 <header class="header">
   <nav class="nav container">
     <h1 class="logo">YourName</h1>
-
-    <!-- Hamburger menu for mobile -->
     <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span>
     </div>
-
     <ul class="nav-links" id="nav-links">
       <li><a href="#home">Home</a></li>
       <li><a href="#projects">Projects</a></li>
@@ -39,13 +32,11 @@
       <li><a href="#contact">Contact</a></li>
       <li><a href="resume.pdf" download class="btn secondary">Resume</a></li>
     </ul>
-
-    <!-- Dark Mode Toggle -->
     <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
   </nav>
 </header>
 
-<!-- ================= HERO ================= -->
+<!-- HERO -->
 <main id="home">
   <section class="hero container fade-in">
     <div class="hero-content">
@@ -57,27 +48,24 @@
       </div>
     </div>
     <div class="hero-image">
-      <img src="assets/images/profile.png" alt="Your profile photo">
+      <img src="assets/images/project1.png" alt="Your profile photo">
     </div>
   </section>
 </main>
 
-<!-- ================= PROJECTS ================= -->
+<!-- PROJECTS -->
 <section id="projects" class="projects container fade-in">
   <h2 class="section-title">Projects</h2>
-
-  <!-- Filter buttons -->
   <div class="filter-buttons">
     <button class="filter-btn active" data-filter="all">All</button>
     <button class="filter-btn" data-filter="HTML">HTML</button>
     <button class="filter-btn" data-filter="CSS">CSS</button>
     <button class="filter-btn" data-filter="JavaScript">JS</button>
   </div>
-
   <div id="projects-grid" class="projects-grid"></div>
 </section>
 
-<!-- ================= SKILLS ================= -->
+<!-- SKILLS -->
 <section id="skills" class="skills container fade-in">
   <h2 class="section-title">Skills</h2>
   <div class="skills-grid">
@@ -90,13 +78,13 @@
   </div>
 </section>
 
-<!-- ================= ABOUT ================= -->
+<!-- ABOUT -->
 <section id="about" class="about container fade-in">
   <h2 class="section-title">About Me</h2>
   <p>I’m a passionate frontend developer who enjoys turning ideas into real, interactive websites. I focus on clean code, responsive layouts, and modern UI/UX design.</p>
 </section>
 
-<!-- ================= CONTACT ================= -->
+<!-- CONTACT -->
 <section id="contact" class="contact container fade-in">
   <h2 class="section-title">Contact</h2>
   <p>Feel free to reach out if you’d like to work together or just say hi!</p>
@@ -107,7 +95,7 @@
   </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
+<!-- FOOTER -->
 <footer class="footer fade-in">
   <p>© 2026 Your Name. All rights reserved.</p>
 </footer>
